@@ -16,19 +16,12 @@ protocol MainNavigation : AnyObject {
 class MainViewModel {
     
     weak var navigation: MainNavigation?
-    
-    //weak var coordinator: MainCoordinator?
-//    var buyAction: ((_ productType: Int) -> Void)?
-//    var createAcountAction: (() -> Void)?
-
-    
+       
     init(navigation: MainNavigation) {
         self.navigation = navigation
     }
     
     func buySubscription(to product: Int) {
-        // coordinator?.buySubscription(to: product.selectedSegmentIndex)
-        //buyAction?(product.selectedSegmentIndex)
         navigation?.buySubscription(to: product)
     }
     
