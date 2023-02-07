@@ -22,13 +22,6 @@ class MainCoordinator: NSObject, Coordinator  {
         let mainViewModel = MainViewModel.init(navigation: self)
         vc.mainViewModel = mainViewModel
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-       /* vc.coordinator = self
-        vc.buyAction = { [weak self] (productType) in
-            self?.buySubscription(to: productType)
-        }
-        vc.createAcountAction = { [weak self] in
-            self?.createAccount()
-        }*/
         navigationController.pushViewController(vc, animated: false)
     }
     
